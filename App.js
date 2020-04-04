@@ -7,10 +7,12 @@ import ShopNavigator from './navigation/ShopNavigator';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import ordersReducer from './store/reducers/orders';
 
 const rootReducer = combineReducers({
   products: productsReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer
 });
 
 const store = createStore(rootReducer);
