@@ -97,7 +97,6 @@ const EditProductScreen = (props) => {
 			} else {
 				await dispatch(
 					productActions.createProduct(
-						prodId,
 						formState.inputValues.title,
 						formState.inputValues.description,
 						formState.inputValues.imageUrl,
@@ -186,7 +185,6 @@ const EditProductScreen = (props) => {
 						keyboardType='default'
 						autoCapitalize='sentences'
 						autoCorrect
-						returnKeyType='next'
 						multiline
 						numberOfLines={3}
 						onInputChange={inputChangeHandler}
