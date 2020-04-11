@@ -2,6 +2,7 @@ import { AsyncStorage } from "react-native";
 
 export const AUTHENTICATE = "AUTHENTICATE";
 export const LOGOUT = "LOGOUT";
+export const SET_DID_TRY_AUTO_LOGIN = "SET_DID_TRY_AUTO_LOGIN";
 
 let timer;
 
@@ -131,4 +132,10 @@ const saveDataToStorage = (token, userId, expirationDate) => {
 			expiryDate: expirationDate.toISOString(),
 		})
 	);
+};
+
+export const setDidTryAutoLogin = () => {
+	return {
+		type: SET_DID_TRY_AUTO_LOGIN,
+	};
 };
